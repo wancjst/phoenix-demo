@@ -22,6 +22,11 @@
             <artifactId>coreapi</artifactId>
             <version>${revision}</version>
         </dependency>
+        <dependency>
+            <groupId>com.iquantex</groupId>
+            <artifactId>phoenix-transaction</artifactId>
+            <version>${phoenix.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

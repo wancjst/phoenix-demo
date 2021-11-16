@@ -91,6 +91,7 @@
     <orderEntry type="library" name="Maven: com.googlecode.protobuf-java-format:protobuf-java-format:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.13" level="project" />
     <orderEntry type="library" name="Maven: io.swagger:swagger-annotations:1.5.21" level="project" />
+    <orderEntry type="library" name="Maven: com.iquantex:phoenix-transaction:2.4.0" level="project" />
     <orderEntry type="module" module-name="coreapi" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.0.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.0.1.RELEASE" level="project" />

@@ -150,5 +150,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-web:5.0.5.RELEASE" level="project" />
     <orderEntry type="module" module-name="coreapi" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.20" level="project" />
+    <orderEntry type="library" name="Maven: com.iquantex:phoenix-transaction:2.4.0" level="project" />
   </component>
 </module>
