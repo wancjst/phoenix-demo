@@ -11,5 +11,12 @@
 
     <artifactId>coreapi</artifactId>
 
-
+    <dependencies>
+        <!--tools-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombook.version}</version>
+        </dependency>
+    </dependencies>
 </project>

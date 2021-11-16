@@ -11,5 +11,17 @@
 
     <artifactId>domain</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.iquantex</groupId>
+            <artifactId>phoenix-server-starter</artifactId>
+            <version>${phoenix.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.iquantex.samples</groupId>
+            <artifactId>coreapi</artifactId>
+            <version>${revision}</version>
+        </dependency>
+    </dependencies>
 
 </project>
