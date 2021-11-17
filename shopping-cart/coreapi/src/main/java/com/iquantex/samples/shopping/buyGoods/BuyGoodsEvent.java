@@ -9,6 +9,7 @@ import java.io.Serializable;
 @Getter
 public class BuyGoodsEvent implements Serializable {
 
+	private static final long serialVersionUID = -115044362161028343L;
 	private String remark;
 
 }

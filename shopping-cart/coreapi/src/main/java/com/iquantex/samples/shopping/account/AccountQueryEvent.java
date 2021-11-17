@@ -6,7 +6,6 @@ import lombok.ToString;
 
 import java.io.Serializable;
 
-@ToString
 @AllArgsConstructor
 @Getter
 public class AccountQueryEvent implements Serializable {

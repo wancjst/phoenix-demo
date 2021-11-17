@@ -7,7 +7,6 @@ import lombok.Getter;
 import java.io.Serializable;
 
 @Builder
-@AllArgsConstructor
 @Getter
 public class BuyGoodsCmd implements Serializable {
 
