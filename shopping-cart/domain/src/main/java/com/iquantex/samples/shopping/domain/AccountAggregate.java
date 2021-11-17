@@ -4,7 +4,6 @@ import com.iquantex.phoenix.core.message.RetCode;
 import com.iquantex.phoenix.server.aggregate.ActReturn;
 import com.iquantex.phoenix.server.aggregate.CommandHandler;
 import com.iquantex.phoenix.server.aggregate.EntityAggregateAnnotation;
-import com.iquantex.phoenix.server.aggregate.QueryHandler;
 import com.iquantex.samples.shopping.coreapi.account.AccountCancelCmd;
 import com.iquantex.samples.shopping.coreapi.account.AccountCancelOkEvent;
 import com.iquantex.samples.shopping.coreapi.account.AccountConfirmCmd;
@@ -44,8 +43,6 @@ public class AccountAggregate implements Serializable {
 		return ActReturn.builder().retCode(RetCode.SUCCESS)
 				.event(new AccountQueryEvent(cmd.getAccountCode(), amt, frozenAmt)).build();
 	}
-
-	public void on(AccountQueryEvent event){}
 
 	@CommandHandler(aggregateRootId = "accountCode")
 	public ActReturn act(AccountTryCmd cmd) {

@@ -8,6 +8,8 @@ import com.iquantex.samples.shopping.coreapi.account.AccountQueryCmd;
 import com.iquantex.samples.shopping.coreapi.account.AccountQueryEvent;
 import com.iquantex.samples.shopping.coreapi.goods.GoodsQueryCmd;
 import com.iquantex.samples.shopping.coreapi.goods.GoodsQueryEvent;
+import com.iquantex.samples.shopping.coreapi.pop.PopCmd;
+import com.iquantex.samples.shopping.coreapi.pop.PopEvent;
 import com.iquantex.samples.shopping.coreapi.transaction.BuyGoodsCmd;
 import com.iquantex.samples.shopping.coreapi.transaction.BuyGoodsEvent;
 import com.iquantex.samples.shopping.listener.PopPublishHandler;
@@ -82,11 +84,14 @@ public class ShoppingController {
 
 	@GetMapping("getPop")
 	public String getPop() {
+		PopCmd popCmd = new PopCmd("1");
+		Future<RpcResult> future = client.send(popCmd, "shopping", UUID.randomUUID().toString());
 		try {
-			return new ObjectMapper().writeValueAsString(publishHandler.getPopList());
-		} catch (JsonProcessingException e) {
-			e.printStackTrace();
+			PopEvent result = (PopEvent) future.get(10, TimeUnit.SECONDS).getData();
+			return new ObjectMapper().writeValueAsString(result.getPopList());
 		}
-		return "fail";
+		catch (InterruptedException | ExecutionException | TimeoutException | JsonProcessingException e) {
+			return "rpc error: " + e.getMessage();
+		}
 	}
 }
