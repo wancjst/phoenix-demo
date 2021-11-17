@@ -12,11 +12,21 @@
     <artifactId>coreapi</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>com.iquantex</groupId>
+            <artifactId>phoenix-dgc</artifactId>
+            <version>2.4.0</version>
+        </dependency>
         <!--tools-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombook.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
