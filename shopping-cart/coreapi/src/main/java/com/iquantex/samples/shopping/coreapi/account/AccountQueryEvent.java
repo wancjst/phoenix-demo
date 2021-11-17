@@ -6,9 +6,6 @@ import lombok.ToString;
 
 import java.io.Serializable;
 
-/**
- * @author baozi
- */
 @ToString
 @AllArgsConstructor
 @Getter

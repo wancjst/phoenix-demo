@@ -377,3 +377,383 @@ desc snapshot_store [42001-197]
 2021-11-16 20:58:03 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLException: Table "snapshot_store" already exists; SQL statement:
 CREATE TABLE snapshot_store (aggregate_id VARCHAR(255) NOT NULL, version BIGINT(19) NOT NULL, create_time TIMESTAMP NOT NULL, aggregate_data BLOB NOT NULL, CONSTRAINT snapshot_store_pk PRIMARY KEY (aggregate_id, version)) [42101-197]
+2021-11-17 10:55:50 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] event_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc event_store [42001-197]
+2021-11-17 10:55:50 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "event_store" already exists; SQL statement:
+create table event_store ( 
+aggregate_root_type varchar(255) not null, 
+aggregate_id varchar(255) not null, 
+version bigint(19) not null, 
+idempotent_id varchar(128) not null, 
+event_content blob, 
+create_time timestamp(3) default current_timestamp(3), 
+constraint event_store_pk 
+primary key (aggregate_id, version) ) [42101-197]
+2021-11-17 10:55:50 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] snapshot_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc snapshot_store [42001-197]
+2021-11-17 10:55:50 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "snapshot_store" already exists; SQL statement:
+CREATE TABLE snapshot_store (aggregate_id VARCHAR(255) NOT NULL, version BIGINT(19) NOT NULL, create_time TIMESTAMP NOT NULL, aggregate_data BLOB NOT NULL, CONSTRAINT snapshot_store_pk PRIMARY KEY (aggregate_id, version)) [42101-197]
+2021-11-17 10:55:52 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Table "event_publish_state" not found; SQL statement:
+SELECT COUNT(*) FROM event_publish_state [42102-197]
+2021-11-17 11:00:18 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] event_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc event_store [42001-197]
+2021-11-17 11:00:18 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "event_store" already exists; SQL statement:
+create table event_store ( 
+aggregate_root_type varchar(255) not null, 
+aggregate_id varchar(255) not null, 
+version bigint(19) not null, 
+idempotent_id varchar(128) not null, 
+event_content blob, 
+create_time timestamp(3) default current_timestamp(3), 
+constraint event_store_pk 
+primary key (aggregate_id, version) ) [42101-197]
+2021-11-17 11:00:18 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] snapshot_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc snapshot_store [42001-197]
+2021-11-17 11:00:18 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "snapshot_store" already exists; SQL statement:
+CREATE TABLE snapshot_store (aggregate_id VARCHAR(255) NOT NULL, version BIGINT(19) NOT NULL, create_time TIMESTAMP NOT NULL, aggregate_data BLOB NOT NULL, CONSTRAINT snapshot_store_pk PRIMARY KEY (aggregate_id, version)) [42101-197]
+2021-11-17 11:07:12 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] event_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc event_store [42001-197]
+2021-11-17 11:07:12 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "event_store" already exists; SQL statement:
+create table event_store ( 
+aggregate_root_type varchar(255) not null, 
+aggregate_id varchar(255) not null, 
+version bigint(19) not null, 
+idempotent_id varchar(128) not null, 
+event_content blob, 
+create_time timestamp(3) default current_timestamp(3), 
+constraint event_store_pk 
+primary key (aggregate_id, version) ) [42101-197]
+2021-11-17 11:07:12 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] snapshot_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc snapshot_store [42001-197]
+2021-11-17 11:07:12 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "snapshot_store" already exists; SQL statement:
+CREATE TABLE snapshot_store (aggregate_id VARCHAR(255) NOT NULL, version BIGINT(19) NOT NULL, create_time TIMESTAMP NOT NULL, aggregate_data BLOB NOT NULL, CONSTRAINT snapshot_store_pk PRIMARY KEY (aggregate_id, version)) [42101-197]
+2021-11-17 11:08:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] event_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc event_store [42001-197]
+2021-11-17 11:08:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "event_store" already exists; SQL statement:
+create table event_store ( 
+aggregate_root_type varchar(255) not null, 
+aggregate_id varchar(255) not null, 
+version bigint(19) not null, 
+idempotent_id varchar(128) not null, 
+event_content blob, 
+create_time timestamp(3) default current_timestamp(3), 
+constraint event_store_pk 
+primary key (aggregate_id, version) ) [42101-197]
+2021-11-17 11:08:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] snapshot_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc snapshot_store [42001-197]
+2021-11-17 11:08:36 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "snapshot_store" already exists; SQL statement:
+CREATE TABLE snapshot_store (aggregate_id VARCHAR(255) NOT NULL, version BIGINT(19) NOT NULL, create_time TIMESTAMP NOT NULL, aggregate_data BLOB NOT NULL, CONSTRAINT snapshot_store_pk PRIMARY KEY (aggregate_id, version)) [42101-197]
+2021-11-17 11:15:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1526)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1502)
+	at org.h2.jdbc.JdbcConnection.clearWarnings(JdbcConnection.java:663)
+	at com.alibaba.druid.pool.DruidConnectionHolder.reset(DruidConnectionHolder.java:295)
+	at com.alibaba.druid.pool.DruidDataSource.recycle(DruidDataSource.java:1664)
+	at com.alibaba.druid.pool.DruidPooledConnection.recycle(DruidPooledConnection.java:323)
+	at com.alibaba.druid.pool.DruidPooledConnection.close(DruidPooledConnection.java:268)
+	at org.apache.commons.dbutils.DbUtils.close(DbUtils.java:60)
+	at org.apache.commons.dbutils.AbstractQueryRunner.close(AbstractQueryRunner.java:572)
+	at org.apache.commons.dbutils.QueryRunner.query(QueryRunner.java:399)
+	at org.apache.commons.dbutils.QueryRunner.query(QueryRunner.java:329)
+	at com.iquantex.phoenix.eventstore.jdbc.AbstractDbEventStore.query(AbstractDbEventStore.java:206)
+	at com.iquantex.phoenix.eventstore.jdbc.AbstractDbEventStore.query(AbstractDbEventStore.java:174)
+	at com.iquantex.phoenix.eventstore.jdbc.AbstractDbEventStore.queryList(AbstractDbEventStore.java:110)
+	at com.iquantex.phoenix.eventstore.jdbc.EventStoreService.fetchEventBatch(EventStoreService.java:303)
+	at com.iquantex.phoenix.eventstore.jdbc.EventStoreService.tryExecuteQuery(EventStoreService.java:235)
+	at com.iquantex.phoenix.eventstore.jdbc.EventStoreService.listByTimeStampBetween(EventStoreService.java:220)
+	at com.iquantex.phoenix.eventstore.jdbc.DbEventStore.read(DbEventStore.java:222)
+	at com.iquantex.phoenix.eventpublish.runner.EventPublishReaderRunnable.run(EventPublishReaderRunnable.java:91)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-17 11:15:44 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] event_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc event_store [42001-197]
+2021-11-17 11:15:44 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "event_store" already exists; SQL statement:
+create table event_store ( 
+aggregate_root_type varchar(255) not null, 
+aggregate_id varchar(255) not null, 
+version bigint(19) not null, 
+idempotent_id varchar(128) not null, 
+event_content blob, 
+create_time timestamp(3) default current_timestamp(3), 
+constraint event_store_pk 
+primary key (aggregate_id, version) ) [42101-197]
+2021-11-17 11:15:44 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] snapshot_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc snapshot_store [42001-197]
+2021-11-17 11:15:44 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "snapshot_store" already exists; SQL statement:
+CREATE TABLE snapshot_store (aggregate_id VARCHAR(255) NOT NULL, version BIGINT(19) NOT NULL, create_time TIMESTAMP NOT NULL, aggregate_data BLOB NOT NULL, CONSTRAINT snapshot_store_pk PRIMARY KEY (aggregate_id, version)) [42101-197]
+2021-11-17 11:15:55 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: The database has been closed [90098-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.engine.Database.checkPowerOff(Database.java:536)
+	at org.h2.command.Command.executeQuery(Command.java:228)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:114)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:228)
+	at org.apache.commons.dbutils.QueryRunner.query(QueryRunner.java:387)
+	at org.apache.commons.dbutils.QueryRunner.query(QueryRunner.java:329)
+	at com.iquantex.phoenix.eventstore.jdbc.AbstractDbEventStore.query(AbstractDbEventStore.java:206)
+	at com.iquantex.phoenix.eventstore.jdbc.AbstractDbEventStore.query(AbstractDbEventStore.java:174)
+	at com.iquantex.phoenix.eventstore.jdbc.AbstractDbEventStore.queryList(AbstractDbEventStore.java:110)
+	at com.iquantex.phoenix.eventstore.jdbc.EventStoreService.fetchEventBatch(EventStoreService.java:303)
+	at com.iquantex.phoenix.eventstore.jdbc.EventStoreService.tryExecuteQuery(EventStoreService.java:235)
+	at com.iquantex.phoenix.eventstore.jdbc.EventStoreService.listByTimeStampBetween(EventStoreService.java:220)
+	at com.iquantex.phoenix.eventstore.jdbc.DbEventStore.read(DbEventStore.java:222)
+	at com.iquantex.phoenix.eventpublish.runner.EventPublishReaderRunnable.run(EventPublishReaderRunnable.java:91)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-17 11:15:55 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1526)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1502)
+	at org.h2.jdbc.JdbcConnection.clearWarnings(JdbcConnection.java:663)
+	at com.alibaba.druid.pool.DruidConnectionHolder.reset(DruidConnectionHolder.java:295)
+	at com.alibaba.druid.pool.DruidDataSource.recycle(DruidDataSource.java:1664)
+	at com.alibaba.druid.pool.DruidPooledConnection.recycle(DruidPooledConnection.java:323)
+	at com.alibaba.druid.pool.DruidPooledConnection.close(DruidPooledConnection.java:268)
+	at org.apache.commons.dbutils.DbUtils.close(DbUtils.java:60)
+	at org.apache.commons.dbutils.AbstractQueryRunner.close(AbstractQueryRunner.java:572)
+	at org.apache.commons.dbutils.QueryRunner.query(QueryRunner.java:399)
+	at org.apache.commons.dbutils.QueryRunner.query(QueryRunner.java:329)
+	at com.iquantex.phoenix.eventstore.jdbc.AbstractDbEventStore.query(AbstractDbEventStore.java:206)
+	at com.iquantex.phoenix.eventstore.jdbc.AbstractDbEventStore.query(AbstractDbEventStore.java:174)
+	at com.iquantex.phoenix.eventstore.jdbc.AbstractDbEventStore.queryList(AbstractDbEventStore.java:110)
+	at com.iquantex.phoenix.eventstore.jdbc.EventStoreService.fetchEventBatch(EventStoreService.java:303)
+	at com.iquantex.phoenix.eventstore.jdbc.EventStoreService.tryExecuteQuery(EventStoreService.java:235)
+	at com.iquantex.phoenix.eventstore.jdbc.EventStoreService.listByTimeStampBetween(EventStoreService.java:220)
+	at com.iquantex.phoenix.eventstore.jdbc.DbEventStore.read(DbEventStore.java:222)
+	at com.iquantex.phoenix.eventpublish.runner.EventPublishReaderRunnable.run(EventPublishReaderRunnable.java:91)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-17 11:19:27 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] event_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc event_store [42001-197]
+2021-11-17 11:19:27 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "event_store" already exists; SQL statement:
+create table event_store ( 
+aggregate_root_type varchar(255) not null, 
+aggregate_id varchar(255) not null, 
+version bigint(19) not null, 
+idempotent_id varchar(128) not null, 
+event_content blob, 
+create_time timestamp(3) default current_timestamp(3), 
+constraint event_store_pk 
+primary key (aggregate_id, version) ) [42101-197]
+2021-11-17 11:19:27 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] snapshot_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc snapshot_store [42001-197]
+2021-11-17 11:19:27 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "snapshot_store" already exists; SQL statement:
+CREATE TABLE snapshot_store (aggregate_id VARCHAR(255) NOT NULL, version BIGINT(19) NOT NULL, create_time TIMESTAMP NOT NULL, aggregate_data BLOB NOT NULL, CONSTRAINT snapshot_store_pk PRIMARY KEY (aggregate_id, version)) [42101-197]
+2021-11-17 12:22:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] event_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc event_store [42001-197]
+2021-11-17 12:22:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "event_store" already exists; SQL statement:
+create table event_store ( 
+aggregate_root_type varchar(255) not null, 
+aggregate_id varchar(255) not null, 
+version bigint(19) not null, 
+idempotent_id varchar(128) not null, 
+event_content blob, 
+create_time timestamp(3) default current_timestamp(3), 
+constraint event_store_pk 
+primary key (aggregate_id, version) ) [42101-197]
+2021-11-17 12:22:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] snapshot_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc snapshot_store [42001-197]
+2021-11-17 12:22:10 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "snapshot_store" already exists; SQL statement:
+CREATE TABLE snapshot_store (aggregate_id VARCHAR(255) NOT NULL, version BIGINT(19) NOT NULL, create_time TIMESTAMP NOT NULL, aggregate_data BLOB NOT NULL, CONSTRAINT snapshot_store_pk PRIMARY KEY (aggregate_id, version)) [42101-197]
+2021-11-17 12:30:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] event_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc event_store [42001-197]
+2021-11-17 12:30:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "event_store" already exists; SQL statement:
+create table event_store ( 
+aggregate_root_type varchar(255) not null, 
+aggregate_id varchar(255) not null, 
+version bigint(19) not null, 
+idempotent_id varchar(128) not null, 
+event_content blob, 
+create_time timestamp(3) default current_timestamp(3), 
+constraint event_store_pk 
+primary key (aggregate_id, version) ) [42101-197]
+2021-11-17 12:30:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] snapshot_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc snapshot_store [42001-197]
+2021-11-17 12:30:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "snapshot_store" already exists; SQL statement:
+CREATE TABLE snapshot_store (aggregate_id VARCHAR(255) NOT NULL, version BIGINT(19) NOT NULL, create_time TIMESTAMP NOT NULL, aggregate_data BLOB NOT NULL, CONSTRAINT snapshot_store_pk PRIMARY KEY (aggregate_id, version)) [42101-197]
+2021-11-17 12:37:53 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] event_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc event_store [42001-197]
+2021-11-17 12:37:53 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "event_store" already exists; SQL statement:
+create table event_store ( 
+aggregate_root_type varchar(255) not null, 
+aggregate_id varchar(255) not null, 
+version bigint(19) not null, 
+idempotent_id varchar(128) not null, 
+event_content blob, 
+create_time timestamp(3) default current_timestamp(3), 
+constraint event_store_pk 
+primary key (aggregate_id, version) ) [42101-197]
+2021-11-17 12:37:53 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] snapshot_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc snapshot_store [42001-197]
+2021-11-17 12:37:53 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "snapshot_store" already exists; SQL statement:
+CREATE TABLE snapshot_store (aggregate_id VARCHAR(255) NOT NULL, version BIGINT(19) NOT NULL, create_time TIMESTAMP NOT NULL, aggregate_data BLOB NOT NULL, CONSTRAINT snapshot_store_pk PRIMARY KEY (aggregate_id, version)) [42101-197]
+2021-11-17 12:40:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1526)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1502)
+	at org.h2.jdbc.JdbcConnection.clearWarnings(JdbcConnection.java:663)
+	at com.alibaba.druid.pool.DruidConnectionHolder.reset(DruidConnectionHolder.java:295)
+	at com.alibaba.druid.pool.DruidDataSource.recycle(DruidDataSource.java:1664)
+	at com.alibaba.druid.pool.DruidPooledConnection.recycle(DruidPooledConnection.java:323)
+	at com.alibaba.druid.pool.DruidPooledConnection.close(DruidPooledConnection.java:268)
+	at org.apache.commons.dbutils.DbUtils.close(DbUtils.java:60)
+	at org.apache.commons.dbutils.AbstractQueryRunner.close(AbstractQueryRunner.java:572)
+	at org.apache.commons.dbutils.QueryRunner.query(QueryRunner.java:399)
+	at org.apache.commons.dbutils.QueryRunner.query(QueryRunner.java:329)
+	at com.iquantex.phoenix.eventstore.jdbc.AbstractDbEventStore.query(AbstractDbEventStore.java:206)
+	at com.iquantex.phoenix.eventstore.jdbc.AbstractDbEventStore.query(AbstractDbEventStore.java:174)
+	at com.iquantex.phoenix.eventstore.jdbc.AbstractDbEventStore.queryList(AbstractDbEventStore.java:110)
+	at com.iquantex.phoenix.eventstore.jdbc.EventStoreService.fetchEventBatch(EventStoreService.java:303)
+	at com.iquantex.phoenix.eventstore.jdbc.EventStoreService.tryExecuteQuery(EventStoreService.java:235)
+	at com.iquantex.phoenix.eventstore.jdbc.EventStoreService.listByTimeStampBetween(EventStoreService.java:220)
+	at com.iquantex.phoenix.eventstore.jdbc.DbEventStore.read(DbEventStore.java:222)
+	at com.iquantex.phoenix.eventpublish.runner.EventPublishReaderRunnable.run(EventPublishReaderRunnable.java:91)
+	at java.lang.Thread.run(Thread.java:748)
+2021-11-17 12:40:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: Reading from nio:D:/quail/jerry/demo/phoenix-demo/shopping-cart/data/test.mv.db failed; file length -1 read length 384 at 1076951 [1.4.197/1]"; SQL statement:
+SELECT * FROM event_store WHERE create_time > ? AND create_time < TIMESTAMPADD(SECOND, -1, NOW()) ORDER BY create_time ASC
+ LIMIT 0, 64  [50000-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:307)
+	at org.h2.command.Command.executeQuery(Command.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:114)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:228)
+	at org.apache.commons.dbutils.QueryRunner.query(QueryRunner.java:387)
+	at org.apache.commons.dbutils.QueryRunner.query(QueryRunner.java:329)
+	at com.iquantex.phoenix.eventstore.jdbc.AbstractDbEventStore.query(AbstractDbEventStore.java:206)
+	at com.iquantex.phoenix.eventstore.jdbc.AbstractDbEventStore.query(AbstractDbEventStore.java:174)
+	at com.iquantex.phoenix.eventstore.jdbc.AbstractDbEventStore.queryList(AbstractDbEventStore.java:110)
+	at com.iquantex.phoenix.eventstore.jdbc.EventStoreService.fetchEventBatch(EventStoreService.java:303)
+	at com.iquantex.phoenix.eventstore.jdbc.EventStoreService.tryExecuteQuery(EventStoreService.java:235)
+	at com.iquantex.phoenix.eventstore.jdbc.EventStoreService.listByTimeStampBetween(EventStoreService.java:220)
+	at com.iquantex.phoenix.eventstore.jdbc.DbEventStore.read(DbEventStore.java:222)
+	at com.iquantex.phoenix.eventpublish.runner.EventPublishReaderRunnable.run(EventPublishReaderRunnable.java:91)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: Reading from nio:D:/quail/jerry/demo/phoenix-demo/shopping-cart/data/test.mv.db failed; file length -1 read length 384 at 1076951 [1.4.197/1]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:870)
+	at org.h2.mvstore.DataUtils.readFully(DataUtils.java:417)
+	at org.h2.mvstore.FileStore.readFully(FileStore.java:98)
+	at org.h2.mvstore.Page.read(Page.java:181)
+	at org.h2.mvstore.MVStore.readPage(MVStore.java:1936)
+	at org.h2.mvstore.MVMap.readPage(MVMap.java:698)
+	at org.h2.mvstore.Page.getChildPage(Page.java:208)
+	at org.h2.mvstore.Cursor.min(Cursor.java:129)
+	at org.h2.mvstore.Cursor.hasNext(Cursor.java:36)
+	at org.h2.mvstore.db.TransactionStore$TransactionMap$1.fetchNext(TransactionStore.java:1432)
+	at org.h2.mvstore.db.TransactionStore$TransactionMap$1.<init>(TransactionStore.java:1428)
+	at org.h2.mvstore.db.TransactionStore$TransactionMap.keyIterator(TransactionStore.java:1423)
+	at org.h2.mvstore.db.TransactionStore$TransactionMap.keyIterator(TransactionStore.java:1411)
+	at org.h2.mvstore.db.MVSecondaryIndex.find(MVSecondaryIndex.java:313)
+	at org.h2.mvstore.db.MVSecondaryIndex.find(MVSecondaryIndex.java:258)
+	at org.h2.index.BaseIndex.find(BaseIndex.java:130)
+	at org.h2.index.IndexCursor.find(IndexCursor.java:176)
+	at org.h2.table.TableFilter.next(TableFilter.java:471)
+	at org.h2.command.dml.Select$LazyResultQueryFlat.fetchNextRow(Select.java:1452)
+	at org.h2.result.LazyResult.hasNext(LazyResult.java:79)
+	at org.h2.result.LazyResult.next(LazyResult.java:59)
+	at org.h2.command.dml.Select.queryFlat(Select.java:527)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:633)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:114)
+	at org.h2.command.Command.executeQuery(Command.java:202)
+	... 13 more
+Caused by: java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at sun.nio.ch.FileChannelImpl.readInternal(FileChannelImpl.java:740)
+	at sun.nio.ch.FileChannelImpl.read(FileChannelImpl.java:718)
+	at org.h2.store.fs.FileNio.read(FilePathNio.java:74)
+	at org.h2.mvstore.DataUtils.readFully(DataUtils.java:403)
+	... 39 more
+2021-11-17 12:41:01 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] event_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc event_store [42001-197]
+2021-11-17 12:41:01 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "event_store" already exists; SQL statement:
+create table event_store ( 
+aggregate_root_type varchar(255) not null, 
+aggregate_id varchar(255) not null, 
+version bigint(19) not null, 
+idempotent_id varchar(128) not null, 
+event_content blob, 
+create_time timestamp(3) default current_timestamp(3), 
+constraint event_store_pk 
+primary key (aggregate_id, version) ) [42101-197]
+2021-11-17 12:41:01 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] snapshot_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc snapshot_store [42001-197]
+2021-11-17 12:41:01 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "snapshot_store" already exists; SQL statement:
+CREATE TABLE snapshot_store (aggregate_id VARCHAR(255) NOT NULL, version BIGINT(19) NOT NULL, create_time TIMESTAMP NOT NULL, aggregate_data BLOB NOT NULL, CONSTRAINT snapshot_store_pk PRIMARY KEY (aggregate_id, version)) [42101-197]
+2021-11-17 12:45:06 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] event_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc event_store [42001-197]
+2021-11-17 12:45:06 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "event_store" already exists; SQL statement:
+create table event_store ( 
+aggregate_root_type varchar(255) not null, 
+aggregate_id varchar(255) not null, 
+version bigint(19) not null, 
+idempotent_id varchar(128) not null, 
+event_content blob, 
+create_time timestamp(3) default current_timestamp(3), 
+constraint event_store_pk 
+primary key (aggregate_id, version) ) [42101-197]
+2021-11-17 12:45:06 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "desc[*] snapshot_store"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc snapshot_store [42001-197]
+2021-11-17 12:45:06 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "snapshot_store" already exists; SQL statement:
+CREATE TABLE snapshot_store (aggregate_id VARCHAR(255) NOT NULL, version BIGINT(19) NOT NULL, create_time TIMESTAMP NOT NULL, aggregate_data BLOB NOT NULL, CONSTRAINT snapshot_store_pk PRIMARY KEY (aggregate_id, version)) [42101-197]

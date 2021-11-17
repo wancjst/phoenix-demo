@@ -18,6 +18,11 @@
             <version>${phoenix.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.iquantex</groupId>
+            <artifactId>phoenix-event-publish-starter</artifactId>
+            <version>${phoenix.version}</version>
+        </dependency>
+        <dependency>
             <groupId>com.iquantex.samples</groupId>
             <artifactId>coreapi</artifactId>
             <version>${revision}</version>

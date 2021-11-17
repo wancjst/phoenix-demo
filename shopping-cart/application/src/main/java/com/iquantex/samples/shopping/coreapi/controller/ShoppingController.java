@@ -1,5 +1,7 @@
 package com.iquantex.samples.shopping.coreapi.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.iquantex.phoenix.client.PhoenixClient;
 import com.iquantex.phoenix.client.RpcResult;
 import com.iquantex.samples.shopping.coreapi.account.AccountQueryCmd;
@@ -8,7 +10,9 @@ import com.iquantex.samples.shopping.coreapi.goods.GoodsQueryCmd;
 import com.iquantex.samples.shopping.coreapi.goods.GoodsQueryEvent;
 import com.iquantex.samples.shopping.coreapi.transaction.BuyGoodsCmd;
 import com.iquantex.samples.shopping.coreapi.transaction.BuyGoodsEvent;
+import com.iquantex.samples.shopping.listener.PopPublishHandler;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -25,6 +29,9 @@ import java.util.concurrent.TimeoutException;
 @RestController
 @RequestMapping("shopping")
 public class ShoppingController {
+
+	@Autowired
+	private PopPublishHandler publishHandler;
 
 	private final PhoenixClient client;
 
@@ -71,5 +78,15 @@ public class ShoppingController {
 		catch (InterruptedException | ExecutionException | TimeoutException e) {
 			return "rpc error: " + e.getMessage();
 		}
+	}
+
+	@GetMapping("getPop")
+	public String getPop() {
+		try {
+			return new ObjectMapper().writeValueAsString(publishHandler.getPopList());
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		}
+		return "fail";
 	}
 }

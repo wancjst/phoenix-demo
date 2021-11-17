@@ -39,11 +39,13 @@ public class AccountAggregate implements Serializable {
 		this.frozenAmt = 0;
 	}
 
-	@QueryHandler(aggregateRootId = "accountCode")
+	@CommandHandler(aggregateRootId = "accountCode")
 	public ActReturn act(AccountQueryCmd cmd) {
 		return ActReturn.builder().retCode(RetCode.SUCCESS)
 				.event(new AccountQueryEvent(cmd.getAccountCode(), amt, frozenAmt)).build();
 	}
+
+	public void on(AccountQueryEvent event){}
 
 	@CommandHandler(aggregateRootId = "accountCode")
 	public ActReturn act(AccountTryCmd cmd) {
@@ -118,5 +120,4 @@ public class AccountAggregate implements Serializable {
 	public void on(AccountPayCompensateOkEvent event) {
 		amt += event.getAmt();
 	}
-
 }
