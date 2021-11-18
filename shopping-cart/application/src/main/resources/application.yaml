@@ -2,6 +2,9 @@ spring:
   application:
     name: shopping # 自定义服务名称
 
+## 启动内存kafka
+embedded-kafka: false
+
 quantex:
   phoenix:
     event-publish:
@@ -29,8 +32,8 @@ quantex:
         subscribe:
           - topic: shopping
       event-store:
-        driver-class-name: org.h2.Driver  # 数据库驱动
+        driver-class-name: com.mysql.jdbc.Driver
         data-sources:
-          - url: jdbc:h2:file:./data/test;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=FALSE;INIT=CREATE SCHEMA IF NOT EXISTS PUBLIC # 数据库链接url
-            username: sa                  # 数据库账户
-            password:                     # 数据库密码
+          - url: jdbc:mysql://localhost:3306/shopping?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF8&allowPublicKeyRetrieval=true&useSSL=false
+            username: root
+            password: PHOENIX_EXMAPLE
